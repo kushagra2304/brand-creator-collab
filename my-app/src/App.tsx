@@ -7,6 +7,7 @@ import CreatorSelect from "./components/CreatorSelect";
 import BrandSelect from "./components/BrandSelect";
 import MatchResult from "./components/MatchResult";
 import { Creator, Brand } from "./types";
+import { Github } from "lucide-react";
 
 interface LoadingState {
   creators: boolean;
@@ -87,40 +88,50 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       {/* Header */}
       <motion.header
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="relative overflow-hidden bg-white shadow-sm border-b border-gray-200"
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/5 to-purple-600/5" />
-        <div className="relative max-w-7xl mx-auto px-6 py-8">
-          <div className="text-center space-y-4">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-3"
-            >
-              <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-lg">
-                <Sparkles className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Creator–Brand Matchmaking
-              </h1>
-            </motion.div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-lg text-gray-600 max-w-2xl mx-auto"
-            >
-              Discover perfect partnerships through intelligent matching algorithms that analyze engagement, 
-              audience alignment, and brand values.
-            </motion.p>
-          </div>
-        </div>
-      </motion.header>
+  initial={{ opacity: 0, y: -50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  className="relative overflow-hidden bg-white shadow-sm border-b border-gray-200"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/5 to-purple-600/5" />
+  <div className="relative max-w-7xl mx-auto px-6 py-8">
+    
+    {/* GitHub Icon at top-right */}
+    <a
+      href="https://github.com/kushagra2304/brand-creator-collab" // replace with your repo URL
+      target="_blank"
+      rel="noopener noreferrer"
+      className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
+    >
+      <Github className="h-6 w-6" />
+    </a>
 
+    <div className="text-center space-y-4">
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="inline-flex items-center gap-3"
+      >
+        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-lg">
+          <Sparkles className="h-8 w-8 text-white" />
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          Creator–Brand Matchmaking
+        </h1>
+      </motion.div>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+        className="text-lg text-gray-600 max-w-2xl mx-auto"
+      >
+        Discover perfect partnerships through intelligent matching algorithms that analyze engagement, 
+        audience alignment, and brand values.
+      </motion.p>
+    </div>
+  </div>
+</motion.header>
       <main className="max-w-7xl mx-auto px-6 py-12 space-y-12">
         {/* Error Display */}
         <AnimatePresence>
