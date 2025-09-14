@@ -1,0 +1,17 @@
+[
+  {"id":1,"brandName":"EcoThreads","keywords":["eco-friendly","sustainable","organic"]},
+  {"id":2,"brandName":"TechSphere","keywords":["AI","innovation","gadgets"]},
+  {"id":3,"brandName":"TravelLite","keywords":["travel","adventure","lifestyle"]},
+  {"id":4,"brandName":"FitLife","keywords":["fitness","health","wellness"]},
+  {"id":5,"brandName":"BeautyBloom","keywords":["beauty","skincare","makeup"]},
+  {"id":6,"brandName":"StreetStyle","keywords":["fashion","streetwear","style"]},
+  {"id":7,"brandName":"GadgetGuru","keywords":["tech","reviews","AI"]},
+  {"id":8,"brandName":"AdventureCo","keywords":["travel","vlogs","adventure"]},
+  {"id":9,"brandName":"WellnessWorks","keywords":["health","fitness","gym"]},
+  {"id":10,"brandName":"GlowUp","keywords":["beauty","makeup","skincare"]},
+  {"id":11,"brandName":"EcoWear","keywords":["eco-friendly","sustainable","fashion"]},
+  {"id":12,"brandName":"Innovatech","keywords":["tech","innovation","AI"]},
+  {"id":13,"brandName":"TravelPro","keywords":["travel","lifestyle","adventure"]},
+  {"id":14,"brandName":"FitFam","keywords":["fitness","health","wellness"]},
+  {"id":15,"brandName":"BeautySecrets","keywords":["beauty","skincare","makeup"]}
+]
