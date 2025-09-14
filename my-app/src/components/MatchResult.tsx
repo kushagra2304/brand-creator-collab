@@ -101,7 +101,7 @@ export default function MatchResult({ creator, brand }: Props) {
         </CardHeader>
 
         <CardContent className="space-y-8">
-          {/* Creator and Brand Info */}
+        
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-3">
               <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
@@ -136,7 +136,6 @@ export default function MatchResult({ creator, brand }: Props) {
             </div>
           </div>
 
-          {/* Match Score Visualization */}
           <div className="text-center space-y-6">
             <div className="relative inline-block">
               <ResponsiveContainer width={300} height={300}>
@@ -183,7 +182,7 @@ export default function MatchResult({ creator, brand }: Props) {
             </motion.div>
           </div>
 
-          {/* Shared Keywords */}
+    
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-800">Shared Values & Keywords</h3>
             <div className="bg-gray-50 p-4 rounded-lg">
@@ -208,7 +207,6 @@ export default function MatchResult({ creator, brand }: Props) {
             </div>
           </div>
 
-          {/* Collaboration Recommendation */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-800">Recommended Collaboration</h3>
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg border border-indigo-200">
@@ -232,7 +230,7 @@ export default function MatchResult({ creator, brand }: Props) {
             </div>
           </div>
 
-          {/* Additional Metrics */}
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white p-4 rounded-lg border border-gray-200 text-center">
               <div className="text-2xl font-bold text-blue-600">{formatNumber(creator.followers)}</div>

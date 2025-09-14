@@ -86,54 +86,54 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Header */}
-      <motion.header
-  initial={{ opacity: 0, y: -50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="relative overflow-hidden bg-white shadow-sm border-b border-gray-200"
->
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/5 to-purple-600/5" />
-  <div className="relative max-w-7xl mx-auto px-6 py-8">
-    
-    {/* GitHub Icon at top-right */}
-    <a
-      href="https://github.com/kushagra2304/brand-creator-collab" // replace with your repo URL
-      target="_blank"
-      rel="noopener noreferrer"
-      className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
-    >
-      <Github className="h-6 w-6" />
-    </a>
 
-    <div className="text-center space-y-4">
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        className="inline-flex items-center gap-3"
+      <motion.header
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="relative overflow-hidden bg-white shadow-sm border-b border-gray-200"
       >
-        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-lg">
-          <Sparkles className="h-8 w-8 text-white" />
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/5 to-purple-600/5" />
+        <div className="relative max-w-7xl mx-auto px-6 py-8">
+
+          {/* GitHub Icon at top-right */}
+          <a
+            href="https://github.com/kushagra2304/brand-creator-collab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
+          >
+            <Github className="h-6 w-6" />
+          </a>
+
+          <div className="text-center space-y-4">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="inline-flex items-center gap-3"
+            >
+              <div className="bg-gradient-to-br from-indigo-500 to-purple-600 p-3 rounded-xl shadow-lg">
+                <Sparkles className="h-8 w-8 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Creator–Brand Matchmaking
+              </h1>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="text-lg text-gray-600 max-w-2xl mx-auto"
+            >
+              Discover perfect partnerships through intelligent matching algorithms that analyze engagement,
+              audience alignment, and brand values.
+            </motion.p>
+          </div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          Creator–Brand Matchmaking
-        </h1>
-      </motion.div>
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
-        className="text-lg text-gray-600 max-w-2xl mx-auto"
-      >
-        Discover perfect partnerships through intelligent matching algorithms that analyze engagement, 
-        audience alignment, and brand values.
-      </motion.p>
-    </div>
-  </div>
-</motion.header>
+      </motion.header>
       <main className="max-w-7xl mx-auto px-6 py-12 space-y-12">
-        {/* Error Display */}
+    
         <AnimatePresence>
           {hasErrors && (
             <motion.div
@@ -168,7 +168,6 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* Selection Section */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,7 +184,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Creator Selection */}
+        
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -211,13 +210,13 @@ export default function App() {
                 <CreatorSelect
                   creators={creators}
                   onSelect={setSelectedCreator}
-                  // loading={loading.creators}
-                  // error={errors.creators}
+                // loading={loading.creators}
+                // error={errors.creators}
                 />
               </div>
             </motion.div>
 
-            {/* Brand Selection */}
+    
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -243,14 +242,14 @@ export default function App() {
                 <BrandSelect
                   brands={brands}
                   onSelect={setSelectedBrand}
-                  // loading={loading.brands}
-                  // error={errors.brands}
+                // loading={loading.brands}
+                // error={errors.brands}
                 />
               </div>
             </motion.div>
           </div>
 
-          {/* Action Buttons */}
+
           <AnimatePresence>
             {(selectedCreator || selectedBrand) && (
               <motion.div
@@ -282,7 +281,7 @@ export default function App() {
           </AnimatePresence>
         </motion.section>
 
-        {/* Match Result Section */}
+    
         <AnimatePresence>
           {canShowMatch && (
             <motion.section
@@ -312,7 +311,7 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* Stats Section */}
+      
         {isDataLoaded && !hasErrors && (
           <motion.section
             initial={{ opacity: 0 }}
@@ -353,7 +352,7 @@ export default function App() {
         )}
       </main>
 
-      {/* Footer */}
+
       <footer className="bg-white border-t border-gray-200 py-8 mt-16">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-gray-600">
